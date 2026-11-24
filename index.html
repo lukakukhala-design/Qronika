@@ -1,0 +1,1634 @@
+<!DOCTYPE html>
+<html lang="ka" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ბარ-რესტორანი „ქრონიკა“ | Bar-Restaurant Kronika — ქუთაისი</title>
+    <meta name="description" content="ბარ-რესტორანი ქრონიკა ქუთაისში, იოსებ გრიშაშვილის #35. ქართულ-ევროპული სამზარეულო, საავტორო ბარი, ღვინო და მყუდრო გარემო.">
+
+    <!-- Google Fonts: Georgian Serif & Sans + Latin Luxury Serif -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Noto+Sans+Georgian:wght@300;400;500;600;700&family=Noto+Serif+Georgian:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Tailwind Custom Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        obsidian: '#0E0E10',
+                        charcoal: '#16161A',
+                        surface: '#1E1E24',
+                        gold: {
+                            DEFAULT: '#D4AF37',
+                            light: '#E5B94C',
+                            dark: '#AA8A26',
+                            muted: 'rgba(212, 175, 55, 0.14)'
+                        },
+                        burgundy: {
+                            DEFAULT: '#5C1A24',
+                            light: '#7A2330'
+                        },
+                        ivory: '#F5F3EE',
+                        warmgray: '#A39E93'
+                    },
+                    fontFamily: {
+                        serif: ['"Noto Serif Georgian"', '"Cormorant Garamond"', 'serif'],
+                        sans: ['"Noto Sans Georgian"', 'sans-serif'],
+                        latin: ['"Cormorant Garamond"', 'serif']
+                    },
+                    boxShadow: {
+                        'gold-glow': '0 0 25px rgba(212, 175, 55, 0.25)',
+                        'card': '0 10px 30px -10px rgba(0, 0, 0, 0.7)'
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Custom Scrollbar & Subtle Texture */
+        body {
+            background-color: #0E0E10;
+            color: #F5F3EE;
+            font-family: 'Noto Sans Georgian', sans-serif;
+            overflow-x: hidden;
+        }
+
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0E0E10;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #2C2C34;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #D4AF37;
+        }
+
+        .glass-nav {
+            background: rgba(14, 14, 16, 0.85);
+            backdrop-filter: blur(14px);
+            -webkit-backdrop-filter: blur(14px);
+            border-bottom: 1px solid rgba(212, 175, 55, 0.18);
+        }
+
+        .glass-card {
+            background: rgba(22, 22, 26, 0.75);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(212, 175, 55, 0.15);
+        }
+
+        .hero-gradient {
+            background: linear-gradient(
+                180deg,
+                rgba(14, 14, 16, 0.78) 0%,
+                rgba(14, 14, 16, 0.58) 45%,
+                rgba(14, 14, 16, 0.96) 95%,
+                #0E0E10 100%
+            );
+        }
+
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(18px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate-fade-up {
+            animation: fadeUp 0.6s ease-out forwards;
+        }
+
+        /* Custom Date/Time input styling for dark theme */
+        input[type="date"]::-webkit-calendar-picker-indicator,
+        input[type="time"]::-webkit-calendar-picker-indicator {
+            filter: invert(0.85) sepia(0.4) saturate(2) hue-rotate(10deg);
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body class="antialiased selection:bg-gold selection:text-obsidian pb-16 md:pb-0">
+
+    <!-- ==================== STICKY NAVIGATION ==================== -->
+    <header id="navbar" class="fixed top-0 left-0 right-0 z-40 glass-nav transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                
+                <!-- Brand Emblem & Name -->
+                <a href="#home" class="flex items-center gap-3 group focus:outline-none">
+                    <div class="w-11 h-11 rounded-full border border-gold/50 bg-charcoal flex items-center justify-center relative group-hover:border-gold group-hover:shadow-gold-glow transition-all duration-300">
+                        <!-- Custom Vintage Chronicle Clock / Emblem SVG -->
+                        <svg class="w-6 h-6 text-gold" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+                            <circle cx="12" cy="12" r="9" />
+                            <circle cx="12" cy="12" r="6.5" stroke-dasharray="1.5 2" />
+                            <path d="M12 7v5l3.2 2.2" stroke-linecap="round" stroke-linejoin="round" />
+                            <circle cx="12" cy="12" r="1" fill="currentColor" />
+                        </svg>
+                    </div>
+                    <div class="flex flex-col">
+                        <span class="font-serif text-xl sm:text-2xl font-bold tracking-wide text-ivory group-hover:text-gold transition-colors" data-i18n="brandName">ქრონიკა</span>
+                        <span class="text-[10px] uppercase tracking-[0.22em] text-gold/90 font-medium" data-i18n="brandSub">ბარ-რესტორანი • ქუთაისი</span>
+                    </div>
+                </a>
+
+                <!-- Desktop Navigation Links -->
+                <nav class="hidden lg:flex items-center gap-7 text-sm font-medium text-warmgray">
+                    <a href="#home" class="hover:text-gold transition-colors py-2" data-i18n="navHome">მთავარი</a>
+                    <a href="#about" class="hover:text-gold transition-colors py-2" data-i18n="navAbout">ჩვენ შესახებ</a>
+                    <a href="#menu" class="hover:text-gold transition-colors py-2" data-i18n="navMenu">მენიუ</a>
+                    <a href="#gallery" class="hover:text-gold transition-colors py-2" data-i18n="navGallery">გალერეა</a>
+                    <a href="#contact" class="hover:text-gold transition-colors py-2" data-i18n="navContact">კონტაქტი</a>
+                </nav>
+
+                <!-- Right Controls: Pre-Order Bag, Language Toggle, Book CTA & Mobile Menu -->
+                <div class="flex items-center gap-2.5 sm:gap-3">
+                    <!-- Pre-Order Cart Trigger -->
+                    <button onclick="toggleDrawer(true)" aria-label="შეკვეთის სია" class="relative p-2.5 rounded-xl bg-charcoal border border-gold/25 text-ivory hover:border-gold hover:text-gold transition-all">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" />
+                        </svg>
+                        <span id="cartBadge" class="hidden absolute -top-1.5 -right-1.5 min-w-[20px] h-5 px-1 rounded-full bg-gold text-obsidian text-[11px] font-bold flex items-center justify-center shadow">0</span>
+                    </button>
+
+                    <!-- Language Switcher (KA / EN) -->
+                    <button id="langToggle" onclick="toggleLanguage()" class="px-3 py-2 rounded-xl bg-charcoal border border-gold/25 text-xs font-semibold tracking-wider text-gold hover:bg-gold/10 transition-all cursor-pointer">
+                        EN
+                    </button>
+
+                    <!-- Primary Book Table CTA -->
+                    <button onclick="openBookingModal()" class="hidden sm:inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-gradient-to-r from-gold to-gold-light text-obsidian font-semibold text-sm shadow-gold-glow hover:brightness-110 active:scale-[0.98] transition-all cursor-pointer">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                        </svg>
+                        <span data-i18n="ctaBook">მაგიდის დაჯავშნა</span>
+                    </button>
+
+                    <!-- Mobile Hamburger Button -->
+                    <button id="mobileMenuBtn" onclick="toggleMobileMenu()" aria-label="მენიუს გახსნა" class="lg:hidden p-2.5 rounded-xl bg-charcoal border border-gold/25 text-ivory hover:text-gold transition-colors">
+                        <svg id="hamburgerIcon" class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                        <svg id="closeIcon" class="w-6 h-6 hidden" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Dropdown Navigation -->
+        <div id="mobileMenu" class="hidden lg:hidden bg-charcoal border-t border-gold/20 px-4 pt-3 pb-6 space-y-2 shadow-2xl">
+            <a href="#home" onclick="toggleMobileMenu()" class="block px-4 py-3 rounded-xl text-base font-medium text-ivory hover:bg-gold/10 hover:text-gold transition-colors" data-i18n="navHome">მთავარი</a>
+            <a href="#about" onclick="toggleMobileMenu()" class="block px-4 py-3 rounded-xl text-base font-medium text-ivory hover:bg-gold/10 hover:text-gold transition-colors" data-i18n="navAbout">ჩვენ შესახებ</a>
+            <a href="#menu" onclick="toggleMobileMenu()" class="block px-4 py-3 rounded-xl text-base font-medium text-ivory hover:bg-gold/10 hover:text-gold transition-colors" data-i18n="navMenu">მენიუ</a>
+            <a href="#gallery" onclick="toggleMobileMenu()" class="block px-4 py-3 rounded-xl text-base font-medium text-ivory hover:bg-gold/10 hover:text-gold transition-colors" data-i18n="navGallery">გალერეა</a>
+            <a href="#contact" onclick="toggleMobileMenu()" class="block px-4 py-3 rounded-xl text-base font-medium text-ivory hover:bg-gold/10 hover:text-gold transition-colors" data-i18n="navContact">კონტაქტი</a>
+            <div class="pt-3 border-t border-white/10 flex flex-col gap-2.5">
+                <button onclick="toggleMobileMenu(); openBookingModal();" class="w-full py-3.5 rounded-xl bg-gold text-obsidian font-bold text-center shadow-gold-glow" data-i18n="ctaBook">მაგიდის დაჯავშნა</button>
+                <a href="tel:+995596357735" class="w-full py-3 rounded-xl border border-gold/40 text-gold font-semibold text-center flex items-center justify-center gap-2">
+                    <span>📞 +995 596 35 77 35</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- ==================== HERO SECTION ==================== -->
+    <section id="home" class="relative min-h-screen flex flex-col justify-between pt-24 pb-8 overflow-hidden">
+        <!-- Background Image with Fallback -->
+        <div class="absolute inset-0 z-0">
+            <img 
+                src="https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?auto=format&fit=crop&w=1920&q=80" 
+                onerror="this.src='https://placehold.co/1920x1080/16161A/D4AF37?text=Bar-Restaurant+Kronika'"
+                alt="ბარ-რესტორანი ქრონიკა ატმოსფერო" 
+                class="w-full h-full object-cover object-center scale-105 transform transition-transform duration-1000"
+            >
+            <div class="absolute inset-0 hero-gradient"></div>
+        </div>
+
+        <!-- Hero Center Content -->
+        <div class="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 my-auto text-center pt-10 pb-12 animate-fade-up">
+            <!-- Location Pill Badge -->
+            <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-burgundy/80 border border-gold/40 text-gold-light text-xs sm:text-sm font-medium tracking-wide mb-6 shadow-lg">
+                <span class="w-2 h-2 rounded-full bg-gold animate-pulse"></span>
+                <span data-i18n="heroBadge">ქუთაისი • იოსებ გრიშაშვილის #35</span>
+            </div>
+
+            <!-- Main Headline -->
+            <h1 class="font-serif text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-ivory leading-tight tracking-tight mb-6 drop-shadow-md">
+                <span data-i18n="heroTitle1">გემო, რომელიც</span><br class="hidden sm:inline">
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-gold via-gold-light to-gold" data-i18n="heroTitle2">ისტორიად იქცევა</span>
+            </h1>
+
+            <!-- Subheadline -->
+            <p class="max-w-2xl mx-auto text-base sm:text-lg md:text-xl text-ivory/85 font-light leading-relaxed mb-9" data-i18n="heroSub">
+                ტრადიციული ქართული გასტრონომიისა და დახვეწილი ევროპული სამზარეულოს ჰარმონია ქუთაისის გულში. საავტორო კოქტეილები, რჩეული ღვინო და მყუდრო საღამოები 01:00 საათამდე.
+            </p>
+
+            <!-- Hero Action Buttons -->
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                <button onclick="openBookingModal()" class="w-full sm:w-auto px-8 py-4 rounded-2xl bg-gradient-to-r from-gold to-gold-light text-obsidian font-bold text-base shadow-gold-glow hover:brightness-110 active:scale-[0.98] transition-all flex items-center justify-center gap-2.5 cursor-pointer">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                    </svg>
+                    <span data-i18n="ctaBook">მაგიდის დაჯავშნა</span>
+                </button>
+
+                <a href="#menu" class="w-full sm:w-auto px-8 py-4 rounded-2xl glass-card border border-gold/40 text-ivory font-semibold text-base hover:bg-gold/15 hover:border-gold transition-all flex items-center justify-center gap-2.5">
+                    <svg class="w-5 h-5 text-gold" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                    </svg>
+                    <span data-i18n="ctaViewMenu">მენიუს ნახვა</span>
+                </a>
+            </div>
+        </div>
+
+        <!-- Quick Info Bar at Bottom of Hero -->
+        <div class="relative z-10 max-w-5xl mx-auto w-full px-4 sm:px-6 lg:px-8">
+            <div class="glass-card rounded-2xl p-4 sm:p-5 grid grid-cols-1 md:grid-cols-3 gap-4 text-sm border border-gold/25 shadow-card">
+                <!-- Hours -->
+                <div class="flex items-center gap-3.5 justify-center md:justify-start">
+                    <div class="w-10 h-10 rounded-xl bg-gold/15 border border-gold/30 flex items-center justify-center text-gold shrink-0">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                    </div>
+                    <div>
+                        <p class="text-xs text-warmgray" data-i18n="infoHoursLabel">სამუშაო საათები</p>
+                        <p class="font-semibold text-ivory" data-i18n="infoHoursVal">ყოველდღე: 10:00 – 01:00</p>
+                    </div>
+                </div>
+
+                <!-- Address -->
+                <a href="https://www.google.com/maps/place//data=!4m2!3m1!19sChIJaxNPBACNXEARJOfIk_gkD5s" target="_blank" rel="noopener noreferrer" class="flex items-center gap-3.5 justify-center md:justify-start group">
+                    <div class="w-10 h-10 rounded-xl bg-gold/15 border border-gold/30 flex items-center justify-center text-gold shrink-0 group-hover:bg-gold group-hover:text-obsidian transition-colors">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                        </svg>
+                    </div>
+                    <div>
+                        <p class="text-xs text-warmgray" data-i18n="infoAddrLabel">მისამართი</p>
+                        <p class="font-semibold text-ivory group-hover:text-gold transition-colors" data-i18n="infoAddrVal">გრიშაშვილის #35, ქუთაისი</p>
+                    </div>
+                </a>
+
+                <!-- Phone -->
+                <a href="tel:+995596357735" class="flex items-center gap-3.5 justify-center md:justify-end group">
+                    <div class="w-10 h-10 rounded-xl bg-gold/15 border border-gold/30 flex items-center justify-center text-gold shrink-0 group-hover:bg-gold group-hover:text-obsidian transition-colors">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                        </svg>
+                    </div>
+                    <div>
+                        <p class="text-xs text-warmgray" data-i18n="infoPhoneLabel">დასაჯავშნად დაგვირეკეთ</p>
+                        <p class="font-semibold text-gold tracking-wide group-hover:underline">+995 596 35 77 35</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== ABOUT & EXPERIENCE SECTION ==================== -->
+    <section id="about" class="py-20 sm:py-28 bg-charcoal/50 relative border-t border-white/5">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Left Image Collage -->
+                <div class="lg:col-span-6 relative">
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="space-y-4">
+                            <img 
+                                src="https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=800&q=80" 
+                                onerror="this.src='https://placehold.co/600x750/1E1E24/D4AF37?text=Kronika+Interior'"
+                                alt="ქრონიკას ინტერიერი" 
+                                class="rounded-2xl w-full h-64 sm:h-80 object-cover border border-gold/20 shadow-card"
+                            >
+                            <div class="p-5 rounded-2xl bg-burgundy/40 border border-gold/25">
+                                <p class="font-serif text-2xl sm:text-3xl font-bold text-gold">10:00 – 01:00</p>
+                                <p class="text-xs sm:text-sm text-ivory/80 mt-1" data-i18n="aboutHoursNote">დილის ყავიდან გვიან საღამოს კოქტეილებამდე</p>
+                            </div>
+                        </div>
+                        <div class="space-y-4 pt-8">
+                            <div class="p-5 rounded-2xl bg-surface border border-gold/25">
+                                <p class="font-serif text-2xl sm:text-3xl font-bold text-gold">VIP & Lounge</p>
+                                <p class="text-xs sm:text-sm text-ivory/80 mt-1" data-i18n="aboutVipNote">იზოლირებული სივრცეები განსაკუთრებული შეხვედრებისთვის</p>
+                            </div>
+                            <img 
+                                src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=800&q=80" 
+                                onerror="this.src='https://placehold.co/600x750/1E1E24/D4AF37?text=Georgian+European+Cuisine'"
+                                alt="კერძები ქრონიკაში" 
+                                class="rounded-2xl w-full h-64 sm:h-80 object-cover border border-gold/20 shadow-card"
+                            >
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Story & Feature Cards -->
+                <div class="lg:col-span-6 space-y-6">
+                    <div class="inline-flex items-center gap-2 text-gold text-xs font-bold uppercase tracking-[0.2em]">
+                        <span class="w-8 h-[1px] bg-gold"></span>
+                        <span data-i18n="aboutTag">ჩვენი ისტორია</span>
+                    </div>
+
+                    <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-ivory leading-tight" data-i18n="aboutHeading">
+                        ადგილი, სადაც ქუთაისური სტუმართმოყვარეობა და თანამედროვე გემო ერთიანდება
+                    </h2>
+
+                    <p class="text-warmgray text-base sm:text-lg leading-relaxed" data-i18n="aboutDesc1">
+                        ბარ-რესტორანი <strong class="text-ivory">„ქრონიკა“</strong> (გრიშაშვილის #35) შეიქმნა იმისთვის, რომ თითოეული სტუმრობა დაუვიწყარ მოგონებად აქციოს. აქ ერთ სივრცეში თანაარსებობს ავთენტური ქართული კერძების მდიდარი არომატი და ევროპული გასტრონომიის ელეგანტურობა.
+                    </p>
+
+                    <p class="text-warmgray text-base leading-relaxed" data-i18n="aboutDesc2">
+                        იქნება ეს საქმიანი ლანჩი, ოჯახური ვახშამი, რომანტიკული საღამო თუ მეგობრებთან ერთად გართობა საავტორო კოქტეილების თანხლებით — „ქრონიკა“ გთავაზობთ სიმყუდროვეს, უმაღლეს სერვისსა და გულწრფელ მასპინძლობას.
+                    </p>
+
+                    <!-- 4 Feature Highlights Grid -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4">
+                        <!-- Feature 1 -->
+                        <div class="p-4 rounded-2xl bg-surface/90 border border-gold/15 hover:border-gold/40 transition-colors flex items-start gap-3.5">
+                            <div class="w-10 h-10 rounded-xl bg-gold/10 text-gold flex items-center justify-center shrink-0 mt-0.5">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+                                    <circle cx="12" cy="12" r="9" />
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-ivory text-sm sm:text-base" data-i18n="feat1Title">ქართულ-ევროპული სამზარეულო</h3>
+                                <p class="text-xs text-warmgray mt-1" data-i18n="feat1Desc">ახალი, ადგილობრივი ინგრედიენტებით მომზადებული საფირმო კერძები.</p>
+                            </div>
+                        </div>
+
+                        <!-- Feature 2 -->
+                        <div class="p-4 rounded-2xl bg-surface/90 border border-gold/15 hover:border-gold/40 transition-colors flex items-start gap-3.5">
+                            <div class="w-10 h-10 rounded-xl bg-gold/10 text-gold flex items-center justify-center shrink-0 mt-0.5">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-ivory text-sm sm:text-base" data-i18n="feat2Title">საავტორო ბარი და ღვინო</h3>
+                                <p class="text-xs text-warmgray mt-1" data-i18n="feat2Desc">ქვევრის რჩეული ღვინოები, საფირმო კოქტეილები და კრაფტ ლუდი.</p>
+                            </div>
+                        </div>
+
+                        <!-- Feature 3 -->
+                        <div class="p-4 rounded-2xl bg-surface/90 border border-gold/15 hover:border-gold/40 transition-colors flex items-start gap-3.5">
+                            <div class="w-10 h-10 rounded-xl bg-gold/10 text-gold flex items-center justify-center shrink-0 mt-0.5">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z" />
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-ivory text-sm sm:text-base" data-i18n="feat3Title">VIP / პრივატული სივრცეები</h3>
+                                <p class="text-xs text-warmgray mt-1" data-i18n="feat3Desc">მყუდრო კუპეები დაბადების დღეებისა და დახურული წვეულებებისთვის.</p>
+                            </div>
+                        </div>
+
+                        <!-- Feature 4 -->
+                        <div class="p-4 rounded-2xl bg-surface/90 border border-gold/15 hover:border-gold/40 transition-colors flex items-start gap-3.5">
+                            <div class="w-10 h-10 rounded-xl bg-gold/10 text-gold flex items-center justify-center shrink-0 mt-0.5">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-ivory text-sm sm:text-base" data-i18n="feat4Title">კომფორტი და პარკინგი</h3>
+                                <p class="text-xs text-warmgray mt-1" data-i18n="feat4Desc">მოსახერხებელი მდებარეობა და უფასო პარკირების შესაძლებლობა.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== INTERACTIVE MENU SECTION ==================== -->
+    <section id="menu" class="py-20 sm:py-28 bg-obsidian relative border-t border-white/5">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <!-- Section Header -->
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <div class="inline-flex items-center gap-2 text-gold text-xs font-bold uppercase tracking-[0.2em] mb-3">
+                    <span class="w-6 h-[1px] bg-gold"></span>
+                    <span data-i18n="menuTag">გასტრონომიული კოლექცია</span>
+                    <span class="w-6 h-[1px] bg-gold"></span>
+                </div>
+                <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-ivory mb-4" data-i18n="menuHeading">„ქრონიკას“ მენიუ</h2>
+                <p class="text-warmgray text-sm sm:text-base" data-i18n="menuSub">
+                    აირჩიეთ სასურველი კერძები და სასმელები, დაამატეთ წინასწარი შეკვეთის სიაში და მიაბით მაგიდის ჯავშანს.
+                </p>
+            </div>
+
+            <!-- Category Filter Tabs -->
+            <div id="menuFilters" class="flex flex-wrap items-center justify-center gap-2.5 sm:gap-3 mb-10">
+                <!-- Buttons injected dynamically via JS for seamless KA/EN updates -->
+            </div>
+
+            <!-- Menu Grid -->
+            <div id="menuGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Menu cards rendered dynamically via JS -->
+            </div>
+
+            <!-- Pre-order Banner Callout -->
+            <div class="mt-12 p-6 rounded-2xl glass-card border border-gold/30 flex flex-col sm:flex-row items-center justify-between gap-4">
+                <div class="flex items-center gap-4 text-center sm:text-left">
+                    <div class="w-12 h-12 rounded-2xl bg-gold/15 border border-gold/40 flex items-center justify-center text-gold shrink-0 hidden sm:flex">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
+                        </svg>
+                    </div>
+                    <div>
+                        <h3 class="font-serif text-lg sm:text-xl font-bold text-ivory" data-i18n="preorderBannerTitle">გსურთ მაგიდაზე კერძები წინასწარ დაგხვდეთ?</h3>
+                        <p class="text-xs sm:text-sm text-warmgray mt-0.5" data-i18n="preorderBannerSub">დაამატეთ კერძები სიაში ღილაკით „+ დამატება“ და გადაიტანეთ პირდაპირ ჯავშანში.</p>
+                    </div>
+                </div>
+                <button onclick="toggleDrawer(true)" class="px-6 py-3 rounded-xl bg-surface border border-gold/50 text-gold hover:bg-gold hover:text-obsidian font-semibold text-sm transition-all shrink-0 cursor-pointer">
+                    <span data-i18n="viewPreorderBtn">შეკვეთის სიის ნახვა</span> (<span id="bannerCartCount">0</span>)
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== ATMOSPHERE GALLERY & TESTIMONIALS ==================== -->
+    <section id="gallery" class="py-20 sm:py-28 bg-charcoal/60 border-t border-white/5">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <!-- Gallery Header -->
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
+                <div>
+                    <div class="inline-flex items-center gap-2 text-gold text-xs font-bold uppercase tracking-[0.2em] mb-3">
+                        <span class="w-6 h-[1px] bg-gold"></span>
+                        <span data-i18n="galTag">ატმოსფერო და დეტალები</span>
+                    </div>
+                    <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-ivory" data-i18n="galHeading">„ქრონიკას“ კადრები</h2>
+                </div>
+                <p class="text-warmgray text-sm max-w-md" data-i18n="galSub">დააჭირეთ ნებისმიერ ფოტოს სრულ ეკრანზე სანახავად.</p>
+            </div>
+
+            <!-- Interactive Lightbox Gallery Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5 mb-20">
+                <!-- Gallery Item 1 -->
+                <div onclick="openLightbox('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1400&q=85', 'მთავარი დარბაზი და საღამოს განათება')" class="group relative rounded-2xl overflow-hidden aspect-[4/5] cursor-pointer border border-gold/20">
+                    <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=800&q=80" onerror="this.src='https://placehold.co/600x750/1E1E24/D4AF37?text=Main+Hall'" alt="მთავარი დარბაზი" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-obsidian/90 via-obsidian/20 to-transparent opacity-80 group-hover:opacity-95 transition-opacity"></div>
+                    <div class="absolute bottom-4 left-4 right-4">
+                        <span class="text-[11px] uppercase tracking-wider text-gold font-semibold" data-i18n="galCat1">ინტერიერი</span>
+                        <h3 class="font-serif text-lg font-bold text-ivory mt-0.5" data-i18n="galTitle1">მყუდრო დარბაზი</h3>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 2 -->
+                <div onclick="openLightbox('https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=1400&q=85', 'ქართული სუფრა და გრილზე მომზადებული კერძები')" class="group relative rounded-2xl overflow-hidden aspect-[4/5] cursor-pointer border border-gold/20">
+                    <img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=800&q=80" onerror="this.src='https://placehold.co/600x750/1E1E24/D4AF37?text=Georgian+Feast'" alt="ქართული კერძები" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-obsidian/90 via-obsidian/20 to-transparent opacity-80 group-hover:opacity-95 transition-opacity"></div>
+                    <div class="absolute bottom-4 left-4 right-4">
+                        <span class="text-[11px] uppercase tracking-wider text-gold font-semibold" data-i18n="galCat2">გასტრონომია</span>
+                        <h3 class="font-serif text-lg font-bold text-ivory mt-0.5" data-i18n="galTitle2">ქართული ტრადიცია</h3>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 3 -->
+                <div onclick="openLightbox('https://images.unsplash.com/photo-1536935338788-846bb9981813?auto=format&fit=crop&w=1400&q=85', 'საავტორო კოქტეილები და ბარის კოლექცია')" class="group relative rounded-2xl overflow-hidden aspect-[4/5] cursor-pointer border border-gold/20">
+                    <img src="https://images.unsplash.com/photo-1536935338788-846bb9981813?auto=format&fit=crop&w=800&q=80" onerror="this.src='https://placehold.co/600x750/1E1E24/D4AF37?text=Signature+Cocktails'" alt="ბარი და კოქტეილები" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-obsidian/90 via-obsidian/20 to-transparent opacity-80 group-hover:opacity-95 transition-opacity"></div>
+                    <div class="absolute bottom-4 left-4 right-4">
+                        <span class="text-[11px] uppercase tracking-wider text-gold font-semibold" data-i18n="galCat3">ბარი</span>
+                        <h3 class="font-serif text-lg font-bold text-ivory mt-0.5" data-i18n="galTitle3">საავტორო კოქტეილები</h3>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 4 -->
+                <div onclick="openLightbox('https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=1400&q=85', 'ევროპული და საფირმო სტეიკები')" class="group relative rounded-2xl overflow-hidden aspect-[4/5] cursor-pointer border border-gold/20">
+                    <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=800&q=80" onerror="this.src='https://placehold.co/600x750/1E1E24/D4AF37?text=European+Cuisine'" alt="ევროპული კერძები" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-obsidian/90 via-obsidian/20 to-transparent opacity-80 group-hover:opacity-95 transition-opacity"></div>
+                    <div class="absolute bottom-4 left-4 right-4">
+                        <span class="text-[11px] uppercase tracking-wider text-gold font-semibold" data-i18n="galCat4">ევროპული ხაზი</span>
+                        <h3 class="font-serif text-lg font-bold text-ivory mt-0.5" data-i18n="galTitle4">შეფის სპეციალური</h3>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Guest Reviews Section -->
+            <div class="pt-4">
+                <h3 class="font-serif text-2xl sm:text-3xl font-bold text-center text-ivory mb-10" data-i18n="revHeading">რას ამბობენ ჩვენი სტუმრები</h3>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <!-- Review 1 -->
+                    <div class="p-6 rounded-2xl bg-surface border border-gold/15 flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center gap-1 text-gold mb-3">
+                                <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                            </div>
+                            <p class="text-sm text-ivory/90 leading-relaxed italic" data-i18n="rev1Text">
+                                „ქუთაისში ერთ-ერთი საუკეთესო ადგილია! საოცარი იმერული ხაჭაპური, უგემრიელესი ოჯახური და ძალიან ყურადღებიანი მომსახურება. საღამოს ატმოსფერო კი უბრალოდ შეუდარებელია.“
+                            </p>
+                        </div>
+                        <div class="mt-5 pt-4 border-t border-white/10 flex items-center justify-between">
+                            <span class="font-semibold text-sm text-ivory" data-i18n="rev1Author">გიორგი მ.</span>
+                            <span class="text-xs text-warmgray">Google Reviews</span>
+                        </div>
+                    </div>
+
+                    <!-- Review 2 -->
+                    <div class="p-6 rounded-2xl bg-surface border border-gold/15 flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center gap-1 text-gold mb-3">
+                                <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                            </div>
+                            <p class="text-sm text-ivory/90 leading-relaxed italic" data-i18n="rev2Text">
+                                „დაბადების დღე აღვნიშნეთ პრივატულ სივრცეში. კერძების პორციები ძალიან დიდია და გემო — უმაღლესი დონის. კოქტეილი „ქრონიკა“ აუცილებლად უნდა გასინჯოთ!“
+                            </p>
+                        </div>
+                        <div class="mt-5 pt-4 border-t border-white/10 flex items-center justify-between">
+                            <span class="font-semibold text-sm text-ivory" data-i18n="rev2Author">ნინო კ.</span>
+                            <span class="text-xs text-warmgray">Facebook</span>
+                        </div>
+                    </div>
+
+                    <!-- Review 3 -->
+                    <div class="p-6 rounded-2xl bg-surface border border-gold/15 flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center gap-1 text-gold mb-3">
+                                <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                            </div>
+                            <p class="text-sm text-ivory/90 leading-relaxed italic" data-i18n="rev3Text">
+                                „დახვეწილი ინტერიერი, სასიამოვნო მუსიკა და გვიანობამდე მუშაობის გრაფიკი. იდეალური ადგილია როგორც სადილისთვის, ისე მეგობრებთან ერთად საღამოს გასატარებლად.“
+                            </p>
+                        </div>
+                        <div class="mt-5 pt-4 border-t border-white/10 flex items-center justify-between">
+                            <span class="font-semibold text-sm text-ivory" data-i18n="rev3Author">დავით ბ.</span>
+                            <span class="text-xs text-warmgray">Google Reviews</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== RESERVATION CALLOUT & CONTACT SECTION ==================== -->
+    <section id="contact" class="py-20 sm:py-28 bg-obsidian border-t border-white/5 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-stretch">
+                
+                <!-- Left Contact & Location Info -->
+                <div class="lg:col-span-5 flex flex-col justify-between space-y-6">
+                    <div>
+                        <div class="inline-flex items-center gap-2 text-gold text-xs font-bold uppercase tracking-[0.2em] mb-3">
+                            <span class="w-6 h-[1px] bg-gold"></span>
+                            <span data-i18n="contactTag">კონტაქტი და ლოკაცია</span>
+                        </div>
+                        <h2 class="font-serif text-3xl sm:text-4xl font-bold text-ivory mb-4" data-i18n="contactHeading">გვეწვიეთ ქუთაისში</h2>
+                        <p class="text-warmgray text-sm sm:text-base leading-relaxed" data-i18n="contactSub">
+                            დაჯავშნეთ მაგიდა ონლაინ ან დაგვიკავშირდით ტელეფონით. სიამოვნებით გიმასპინძლებთ!
+                        </p>
+                    </div>
+
+                    <div class="space-y-4">
+                        <!-- Address Card -->
+                        <div class="p-4 rounded-2xl bg-surface border border-gold/20 flex items-start gap-4">
+                            <div class="w-11 h-11 rounded-xl bg-gold/15 text-gold flex items-center justify-center shrink-0">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                                </svg>
+                            </div>
+                            <div>
+                                <p class="text-xs text-warmgray" data-i18n="infoAddrLabel">მისამართი</p>
+                                <p class="font-semibold text-ivory text-base mt-0.5" data-i18n="fullAddr">იოსებ გრიშაშვილის ქუჩა #35, ქუთაისი</p>
+                                <a href="https://www.google.com/maps/place//data=!4m2!3m1!19sChIJaxNPBACNXEARJOfIk_gkD5s" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs text-gold hover:underline mt-2 font-medium">
+                                    <span data-i18n="openGoogleMaps">Google Maps-ზე გახსნა</span>
+                                    <span>↗</span>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Phone Card -->
+                        <div class="p-4 rounded-2xl bg-surface border border-gold/20 flex items-start gap-4">
+                            <div class="w-11 h-11 rounded-xl bg-gold/15 text-gold flex items-center justify-center shrink-0">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                                </svg>
+                            </div>
+                            <div class="flex-1">
+                                <p class="text-xs text-warmgray" data-i18n="phoneLabel">ტელეფონი / ჯავშნები</p>
+                                <div class="flex items-center justify-between flex-wrap gap-2 mt-0.5">
+                                    <a href="tel:+995596357735" class="font-bold text-ivory hover:text-gold text-lg tracking-wide transition-colors">+995 596 35 77 35</a>
+                                    <button onclick="copyPhoneNumber()" class="px-3 py-1 rounded-lg bg-charcoal border border-gold/30 text-xs text-gold hover:bg-gold hover:text-obsidian transition-colors cursor-pointer" data-i18n="copyBtn">კოპირება</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Hours & Social Card -->
+                        <div class="p-4 rounded-2xl bg-surface border border-gold/20 flex items-start gap-4">
+                            <div class="w-11 h-11 rounded-xl bg-gold/15 text-gold flex items-center justify-center shrink-0">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                </svg>
+                            </div>
+                            <div class="flex-1">
+                                <p class="text-xs text-warmgray" data-i18n="infoHoursLabel">სამუშაო საათები</p>
+                                <p class="font-semibold text-ivory text-base mt-0.5" data-i18n="infoHoursVal">ყოველდღე: 10:00 – 01:00</p>
+                                <div class="mt-3">
+                                    <a href="https://www.facebook.com/profile.php?id=61574585801259" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-[#1877F2]/15 border border-[#1877F2]/40 text-ivory hover:bg-[#1877F2] text-xs font-semibold transition-all">
+                                        <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"/></svg>
+                                        <span data-i18n="fbFollow">გვესტუმრეთ Facebook-ზე</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Stylized Interactive Map & Direct Booking Card -->
+                <div class="lg:col-span-7 flex flex-col justify-between rounded-3xl overflow-hidden bg-surface border border-gold/25 shadow-card">
+                    <!-- Embedded Interactive Google Maps Iframe for Kutaisi Grishashvili 35 -->
+                    <div class="relative w-full h-72 sm:h-80 bg-charcoal">
+                        <iframe 
+                            title="ბარ-რესტორანი ქრონიკა რუკა"
+                            src="https://maps.google.com/maps?q=42.2674533,42.6960277&hl=ka&z=16&output=embed"
+                            class="w-full h-full border-0 filter invert-[90%] hue-rotate-180 contrast-[95%]"
+                            loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                        <!-- Overlay Badge -->
+                        <div class="absolute top-4 left-4 glass-card px-4 py-2 rounded-xl border border-gold/40 shadow-lg">
+                            <p class="text-xs font-bold text-gold">ბარ-რესტორანი „ქრონიკა“</p>
+                            <p class="text-[11px] text-ivory/90">გრიშაშვილის #35, ქუთაისი</p>
+                        </div>
+                    </div>
+
+                    <!-- Quick Action Footer Inside Map Card -->
+                    <div class="p-6 sm:p-8 bg-gradient-to-br from-surface to-charcoal flex flex-col sm:flex-row items-center justify-between gap-4 border-t border-gold/20">
+                        <div>
+                            <h3 class="font-serif text-xl sm:text-2xl font-bold text-ivory" data-i18n="mapCtaTitle">მზად ხართ საღამოს დასაგეგმად?</h3>
+                            <p class="text-xs sm:text-sm text-warmgray mt-1" data-i18n="mapCtaSub">აირჩიეთ სასურველი დრო და დარბაზი სულ რაღაც 30 წამში.</p>
+                        </div>
+                        <div class="flex items-center gap-3 w-full sm:w-auto">
+                            <a href="https://www.google.com/maps/place//data=!4m2!3m1!19sChIJaxNPBACNXEARJOfIk_gkD5s" target="_blank" rel="noopener noreferrer" class="flex-1 sm:flex-initial px-4 py-3 rounded-xl border border-gold/40 text-ivory hover:border-gold hover:text-gold text-sm font-semibold text-center transition-all" data-i18n="mapDirections">
+                                მარშრუტი
+                            </a>
+                            <button onclick="openBookingModal()" class="flex-1 sm:flex-initial px-6 py-3 rounded-xl bg-gold text-obsidian font-bold text-sm shadow-gold-glow hover:brightness-110 transition-all cursor-pointer" data-i18n="ctaBook">
+                                მაგიდის დაჯავშნა
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer class="bg-charcoal border-t border-gold/15 pt-12 pb-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-6 pb-8 border-b border-white/10">
+                <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-full border border-gold/50 bg-obsidian flex items-center justify-center text-gold font-serif font-bold text-lg">ქ</div>
+                    <div>
+                        <p class="font-serif text-lg font-bold text-ivory" data-i18n="footerBrand">ბარ-რესტორანი „ქრონიკა“</p>
+                        <p class="text-xs text-warmgray" data-i18n="fullAddr">იოსებ გრიშაშვილის ქუჩა #35, ქუთაისი</p>
+                    </div>
+                </div>
+
+                <div class="flex flex-wrap items-center justify-center gap-6 text-sm text-warmgray">
+                    <a href="#home" class="hover:text-gold transition-colors" data-i18n="navHome">მთავარი</a>
+                    <a href="#about" class="hover:text-gold transition-colors" data-i18n="navAbout">ჩვენ შესახებ</a>
+                    <a href="#menu" class="hover:text-gold transition-colors" data-i18n="navMenu">მენიუ</a>
+                    <a href="#gallery" class="hover:text-gold transition-colors" data-i18n="navGallery">გალერეა</a>
+                    <a href="https://www.facebook.com/profile.php?id=61574585801259" target="_blank" rel="noopener noreferrer" class="text-gold hover:underline">Facebook</a>
+                </div>
+            </div>
+
+            <div class="pt-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-warmgray">
+                <p>© <span id="currentYear"></span> <span data-i18n="footerRights">ბარ-რესტორანი „ქრონიკა“ (Bar-Restaurant Kronika). ყველა უფლება დაცულია.</span></p>
+                <p>📞 <a href="tel:+995596357735" class="text-ivory hover:text-gold">+995 596 35 77 35</a> • 10:00 – 01:00</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ==================== MOBILE STICKY BOTTOM ACTION BAR ==================== -->
+    <div class="md:hidden fixed bottom-0 left-0 right-0 z-40 glass-nav border-t border-gold/30 px-3 py-2.5 grid grid-cols-3 gap-2">
+        <a href="tel:+995596357735" class="flex flex-col items-center justify-center py-1.5 rounded-xl bg-surface text-ivory border border-white/10 active:scale-95 transition-transform">
+            <span class="text-xs font-semibold text-gold">📞 <span data-i18n="mobCall">დარეკვა</span></span>
+        </a>
+        <a href="#menu" class="flex flex-col items-center justify-center py-1.5 rounded-xl bg-surface text-ivory border border-white/10 active:scale-95 transition-transform">
+            <span class="text-xs font-semibold">🍽️ <span data-i18n="navMenu">მენიუ</span></span>
+        </a>
+        <button onclick="openBookingModal()" class="flex flex-col items-center justify-center py-1.5 rounded-xl bg-gold text-obsidian font-bold shadow-gold-glow active:scale-95 transition-transform">
+            <span class="text-xs" data-i18n="mobBook">დაჯავშნა</span>
+        </button>
+    </div>
+
+    <!-- ==================== PRE-ORDER / TASTING LIST DRAWER ==================== -->
+    <div id="preorderDrawer" class="fixed inset-0 z-50 hidden">
+        <!-- Backdrop -->
+        <div onclick="toggleDrawer(false)" class="absolute inset-0 bg-black/75 backdrop-blur-sm transition-opacity"></div>
+        
+        <!-- Drawer Panel -->
+        <div class="absolute top-0 right-0 bottom-0 w-full max-w-md bg-charcoal border-l border-gold/30 shadow-2xl flex flex-col justify-between p-6">
+            <!-- Drawer Header -->
+            <div class="flex items-center justify-between pb-4 border-b border-white/10">
+                <div>
+                    <h3 class="font-serif text-xl font-bold text-ivory" data-i18n="drawerTitle">წინასწარი შეკვეთის სია</h3>
+                    <p class="text-xs text-warmgray" data-i18n="drawerSub">არჩეული კერძები ავტომატურად მიებმება მაგიდის ჯავშანს</p>
+                </div>
+                <button onclick="toggleDrawer(false)" class="p-2 rounded-xl bg-surface text-warmgray hover:text-ivory cursor-pointer">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Drawer Items List -->
+            <div id="drawerItems" class="flex-1 overflow-y-auto py-4 space-y-3">
+                <!-- Dynamic items -->
+            </div>
+
+            <!-- Drawer Footer -->
+            <div class="pt-4 border-t border-white/10 space-y-4">
+                <div class="flex items-center justify-between text-base font-bold">
+                    <span class="text-warmgray" data-i18n="drawerTotal">სავარაუდო ჯამი:</span>
+                    <span id="drawerTotalAmount" class="text-gold text-xl">0.00 ₾</span>
+                </div>
+                <div class="grid grid-cols-2 gap-3">
+                    <button onclick="clearCart()" class="py-3 rounded-xl border border-white/15 text-warmgray hover:text-ivory text-sm font-medium cursor-pointer" data-i18n="drawerClear">გასუფთავება</button>
+                    <button onclick="proceedToBookingWithCart()" class="py-3 rounded-xl bg-gold text-obsidian font-bold text-sm shadow-gold-glow hover:brightness-110 cursor-pointer" data-i18n="drawerProceed">ჯავშანზე გადასვლა</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ==================== TABLE RESERVATION MODAL ==================== -->
+    <div id="bookingModal" class="fixed inset-0 z-50 hidden overflow-y-auto">
+        <div class="min-h-screen px-4 flex items-center justify-center py-8">
+            <!-- Backdrop -->
+            <div onclick="closeBookingModal()" class="fixed inset-0 bg-black/80 backdrop-blur-sm"></div>
+
+            <!-- Modal Container -->
+            <div class="relative w-full max-w-xl rounded-3xl bg-charcoal border border-gold/40 shadow-2xl p-6 sm:p-8 z-10 animate-fade-up">
+                <!-- Close Button -->
+                <button onclick="closeBookingModal()" class="absolute top-5 right-5 p-2 rounded-xl bg-surface text-warmgray hover:text-ivory transition-colors cursor-pointer">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
+
+                <!-- Booking Form View -->
+                <div id="bookingFormView">
+                    <div class="mb-6">
+                        <span class="text-xs font-bold uppercase tracking-widest text-gold" data-i18n="modalTag">ონლაინ ჯავშანი</span>
+                        <h3 class="font-serif text-2xl sm:text-3xl font-bold text-ivory mt-1" data-i18n="modalTitle">მაგიდის დაჯავშნა „ქრონიკაში“</h3>
+                        <p class="text-xs text-warmgray mt-1" data-i18n="modalSub">იოსებ გრიშაშვილის #35 • სამუშაო საათები: 10:00 – 01:00</p>
+                    </div>
+
+                    <form id="reservationForm" onsubmit="handleBookingSubmit(event)" class="space-y-4">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <!-- Name -->
+                            <div>
+                                <label class="block text-xs font-medium text-warmgray mb-1.5" data-i18n="formNameLabel">სახელი და გვარი *</label>
+                                <input type="text" id="guestName" required placeholder="მაგ: გიორგი ბერიძე" class="w-full px-4 py-3 rounded-xl bg-surface border border-white/15 text-ivory text-sm focus:outline-none focus:border-gold">
+                            </div>
+                            <!-- Phone -->
+                            <div>
+                                <label class="block text-xs font-medium text-warmgray mb-1.5" data-i18n="formPhoneLabel">ტელეფონის ნომერი *</label>
+                                <input type="tel" id="guestPhone" required placeholder="+995 5XX XX XX XX" class="w-full px-4 py-3 rounded-xl bg-surface border border-white/15 text-ivory text-sm focus:outline-none focus:border-gold">
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                            <!-- Date -->
+                            <div>
+                                <label class="block text-xs font-medium text-warmgray mb-1.5" data-i18n="formDateLabel">თარიღი *</label>
+                                <input type="date" id="bookingDate" required class="w-full px-3.5 py-3 rounded-xl bg-surface border border-white/15 text-ivory text-sm focus:outline-none focus:border-gold">
+                            </div>
+                            <!-- Time -->
+                            <div>
+                                <label class="block text-xs font-medium text-warmgray mb-1.5" data-i18n="formTimeLabel">დრო *</label>
+                                <select id="bookingTime" required class="w-full px-3.5 py-3 rounded-xl bg-surface border border-white/15 text-ivory text-sm focus:outline-none focus:border-gold">
+                                    <option value="12:00">12:00</option>
+                                    <option value="14:00">14:00</option>
+                                    <option value="16:00">16:00</option>
+                                    <option value="18:00">18:00</option>
+                                    <option value="19:30" selected>19:30</option>
+                                    <option value="20:30">20:30</option>
+                                    <option value="21:30">21:30</option>
+                                    <option value="22:30">22:30</option>
+                                    <option value="23:30">23:30</option>
+                                </select>
+                            </div>
+                            <!-- Guests -->
+                            <div>
+                                <label class="block text-xs font-medium text-warmgray mb-1.5" data-i18n="formGuestsLabel">სტუმრების რაოდენობა *</label>
+                                <select id="guestCount" required class="w-full px-3.5 py-3 rounded-xl bg-surface border border-white/15 text-ivory text-sm focus:outline-none focus:border-gold">
+                                    <option value="2">2 სტუმარი</option>
+                                    <option value="3">3 სტუმარი</option>
+                                    <option value="4" selected>4 სტუმარი</option>
+                                    <option value="6">6 სტუმარი</option>
+                                    <option value="8">8 სტუმარი</option>
+                                    <option value="10">10 სტუმარი</option>
+                                    <option value="15+">15+ (ბანკეტი / VIP)</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <!-- Zone Selection -->
+                        <div>
+                            <label class="block text-xs font-medium text-warmgray mb-1.5" data-i18n="formZoneLabel">სასურველი სივრცე</label>
+                            <div class="grid grid-cols-3 gap-2.5">
+                                <label class="cursor-pointer">
+                                    <input type="radio" name="zone" value="მთავარი დარბაზი" checked class="peer sr-only">
+                                    <div class="p-2.5 rounded-xl bg-surface border border-white/15 text-center text-xs font-medium text-warmgray peer-checked:border-gold peer-checked:bg-gold/15 peer-checked:text-gold transition-all" data-i18n="zoneMain">
+                                        მთავარი დარბაზი
+                                    </div>
+                                </label>
+                                <label class="cursor-pointer">
+                                    <input type="radio" name="zone" value="ბარის ზონა" class="peer sr-only">
+                                    <div class="p-2.5 rounded-xl bg-surface border border-white/15 text-center text-xs font-medium text-warmgray peer-checked:border-gold peer-checked:bg-gold/15 peer-checked:text-gold transition-all" data-i18n="zoneBar">
+                                        ბარის ზონა
+                                    </div>
+                                </label>
+                                <label class="cursor-pointer">
+                                    <input type="radio" name="zone" value="პრივატული კუპე (VIP)" class="peer sr-only">
+                                    <div class="p-2.5 rounded-xl bg-surface border border-white/15 text-center text-xs font-medium text-warmgray peer-checked:border-gold peer-checked:bg-gold/15 peer-checked:text-gold transition-all" data-i18n="zoneVip">
+                                        პრივატული კუპე
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Special Notes / Pre-ordered dishes -->
+                        <div>
+                            <label class="block text-xs font-medium text-warmgray mb-1.5" data-i18n="formNotesLabel">დამატებითი სურვილები / წინასწარი შეკვეთა</label>
+                            <textarea id="bookingNotes" rows="3" placeholder="მაგ: ფანჯარასთან მაგიდა, დაბადების დღის ტორტი..." class="w-full px-4 py-2.5 rounded-xl bg-surface border border-white/15 text-ivory text-sm focus:outline-none focus:border-gold"></textarea>
+                        </div>
+
+                        <button type="submit" class="w-full py-4 rounded-2xl bg-gradient-to-r from-gold to-gold-light text-obsidian font-bold text-base shadow-gold-glow hover:brightness-110 transition-all cursor-pointer" data-i18n="formSubmitBtn">
+                            ჯავშნის დადასტურება
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Booking Confirmation Receipt View -->
+                <div id="bookingReceiptView" class="hidden text-center py-4 space-y-5">
+                    <div class="w-16 h-16 rounded-full bg-gold/20 border-2 border-gold text-gold flex items-center justify-center mx-auto">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                        </svg>
+                    </div>
+
+                    <div>
+                        <span id="bookingRefCode" class="px-3 py-1 rounded-full bg-burgundy text-gold text-xs font-mono font-bold tracking-wider">KRN-2026</span>
+                        <h3 class="font-serif text-2xl sm:text-3xl font-bold text-ivory mt-3" data-i18n="receiptTitle">ჯავშანი მიღებულია!</h3>
+                        <p class="text-sm text-warmgray mt-1" data-i18n="receiptSub">ჩვენი მენეჯერი მალე დაგიკავშირდებათ დეტალების დასაზუსტებლად.</p>
+                    </div>
+
+                    <div id="receiptSummaryBox" class="p-4 rounded-2xl bg-surface border border-gold/25 text-left text-sm space-y-2">
+                        <!-- Summary populated by JS -->
+                    </div>
+
+                    <div class="flex flex-col sm:flex-row gap-3 pt-2">
+                        <a href="tel:+995596357735" class="flex-1 py-3.5 rounded-xl bg-gold text-obsidian font-bold text-sm flex items-center justify-center gap-2">
+                            <span>📞 <span data-i18n="receiptCallBtn">დარეკვა: 596 35 77 35</span></span>
+                        </a>
+                        <button onclick="resetBookingModal()" class="flex-1 py-3.5 rounded-xl border border-white/20 text-ivory hover:border-gold text-sm font-semibold cursor-pointer" data-i18n="receiptCloseBtn">
+                            დახურვა
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ==================== IMAGE LIGHTBOX MODAL ==================== -->
+    <div id="lightboxModal" onclick="closeLightbox()" class="fixed inset-0 z-50 hidden bg-black/90 backdrop-blur-md flex items-center justify-center p-4">
+        <div onclick="event.stopPropagation()" class="relative max-w-4xl w-full">
+            <button onclick="closeLightbox()" class="absolute -top-12 right-0 text-ivory hover:text-gold flex items-center gap-1.5 text-sm font-semibold cursor-pointer">
+                <span data-i18n="closeLabel">დახურვა</span> ✕
+            </button>
+            <img id="lightboxImg" src="" alt="Preview" class="w-full max-h-[80vh] object-contain rounded-2xl border border-gold/30 shadow-2xl">
+            <p id="lightboxCaption" class="text-center text-ivory font-serif text-lg mt-4"></p>
+        </div>
+    </div>
+
+    <!-- ==================== CUSTOM TOAST NOTIFICATION ==================== -->
+    <div id="toastNotification" class="fixed bottom-20 md:bottom-6 left-1/2 -translate-x-1/2 z-50 hidden">
+        <div class="px-5 py-3 rounded-2xl bg-surface border border-gold text-ivory text-sm font-medium shadow-2xl flex items-center gap-2.5">
+            <span class="w-2 h-2 rounded-full bg-gold"></span>
+            <span id="toastMessage">შეტყობინება</span>
+        </div>
+    </div>
+
+    <!-- ==================== JAVASCRIPT LOGIC ==================== -->
+    <script>
+        // 1. MENU DATASET (Georgian & English)
+        const menuItems = [
+            // Georgian Classics
+            {
+                id: 'khachapuri-imeruli',
+                category: 'georgian',
+                nameKa: 'იმერული ხაჭაპური „ქრონიკა“',
+                nameEn: 'Imeretian Khachapuri "Kronika"',
+                descKa: 'ტრადიციული იმერული ყველით გამომცხვარი ფაფუკი ცომი, ერბოს ნაზი არომატით.',
+                descEn: 'Fluffy golden dough baked with authentic Imeretian cheese and melted butter.',
+                price: 18.00,
+                badgeKa: 'შეფის რჩეული',
+                badgeEn: "Chef's Choice"
+            },
+            {
+                id: 'ojakhuri-pork',
+                category: 'georgian',
+                nameKa: 'ოჯახური ღორის ხორცით კეცზე',
+                nameEn: 'Ojakhuri with Pork on Clay Pan',
+                descKa: 'შებრაწული ღორის ხორცი, ოქროსფერი კარტოფილი, ხახვი, ნიორი და სურნელოვანი სუნელები.',
+                descEn: 'Pan-seared pork, crispy golden potatoes, caramelized onions, garlic, and Georgian herbs.',
+                price: 24.00,
+                badgeKa: 'პოპულარული',
+                badgeEn: 'Popular'
+            },
+            {
+                id: 'khinkali-kalakuri',
+                category: 'georgian',
+                nameKa: 'ხინკალი ქალაქური (10 ცალი)',
+                nameEn: 'Kalakuri Khinkali (10 pcs)',
+                descKa: 'წვნიანი საქონლისა და ღორის ხორცის შიგთავსით, ახალი მწვანილითა და შავი პილპილით.',
+                descEn: 'Juicy beef and pork dumplings infused with fresh coriander, herbs, and black pepper.',
+                price: 17.00,
+                badgeKa: '',
+                badgeEn: ''
+            },
+            {
+                id: 'chkmeruli',
+                category: 'georgian',
+                nameKa: 'ჩქმერული ნაღებისა და ნივრის სოუსში',
+                nameEn: 'Chkmeruli in Garlic Cream Sauce',
+                descKa: 'ხრაშუნა წიწილა შებრაწული კეცზე, არომატულ ნივრიან და ნაღების სოუსში.',
+                descEn: 'Crispy roasted baby chicken served sizzling in a rich garlic and cream sauce.',
+                price: 26.00,
+                badgeKa: 'შეფის რჩეული',
+                badgeEn: "Chef's Choice"
+            },
+            {
+                id: 'kubdari',
+                category: 'georgian',
+                nameKa: 'სვანური კუბდარი',
+                nameEn: 'Svanetian Kubdari',
+                descKa: 'დაკეპილი საქონლისა და ღორის ხორცი სვანური მარილითა და გიცრულით.',
+                descEn: 'Hand-chopped spiced beef and pork pie seasoned with authentic Svanetian salt.',
+                price: 21.00,
+                badgeKa: '',
+                badgeEn: ''
+            },
+
+            // European Dishes
+            {
+                id: 'ribeye-steak',
+                category: 'european',
+                nameKa: 'რიბაი სტეიკი ბოსტნეულით',
+                nameEn: 'Grilled Ribeye Steak',
+                descKa: 'უმაღლესი ხარისხის საქონლის სტეიკი გრილზე შემწვარ ბოსტნეულთან და პილპილის სოუსთან ერთად.',
+                descEn: 'Prime beef ribeye grilled to perfection with charred seasonal vegetables and peppercorn jus.',
+                price: 48.00,
+                badgeKa: 'პრემიუმ',
+                badgeEn: 'Premium'
+            },
+            {
+                id: 'salmon-fillet',
+                category: 'european',
+                nameKa: 'ორაგულის ფილე ლიმონის სოუსით',
+                nameEn: 'Pan-Seared Salmon Fillet',
+                descKa: 'ნორვეგიული ორაგული, ბროკოლის პიურე და ნაზი თეთრი ღვინისა და ლიმონის სოუსი.',
+                descEn: 'Norwegian salmon fillet served over velvety broccoli purée with lemon butter sauce.',
+                price: 39.00,
+                badgeKa: 'შეფის რჩეული',
+                badgeEn: "Chef's Choice"
+            },
+            {
+                id: 'carbonara',
+                category: 'european',
+                nameKa: 'სპაგეტი კარბონარა',
+                nameEn: 'Classic Spaghetti Carbonara',
+                descKa: 'იტალიური პასტა ხრაშუნა ბეკონით, პარმეზანითა და კვერცხის გულის კრემოვანი სოუსით.',
+                descEn: 'Al dente spaghetti tossed with crispy guanciale, aged Parmesan, and silky egg yolk sauce.',
+                price: 22.00,
+                badgeKa: '',
+                badgeEn: ''
+            },
+
+            // Salads & Starters
+            {
+                id: 'georgian-walnut-salad',
+                category: 'salads',
+                nameKa: 'ქართული სალათი ნიგვზითა და კახური ზეთით',
+                nameEn: 'Georgian Salad with Walnut Dressing',
+                descKa: 'მწიფე პომიდორი, კიტრი, წითელი ხახვი, რეჰანი და ნიგვზის ნაზი საკმაზი.',
+                descEn: 'Ripe heirloom tomatoes, crisp cucumbers, red onion, purple basil, and crushed walnut paste.',
+                price: 15.00,
+                badgeKa: 'ვეგანური',
+                badgeEn: 'Vegan'
+            },
+            {
+                id: 'caesar-chicken',
+                category: 'salads',
+                nameKa: 'სალათი ცეზარი ქათმის ფილეთი',
+                nameEn: 'Chicken Caesar Salad',
+                descKa: 'აისბერგის სალათი, გრილზე შემწვარი ქათმის ფილე, პარმეზანი, კრუტონები და საფირმო სოუსი.',
+                descEn: 'Crisp romaine lettuce, grilled chicken breast, shaved Parmesan, croutons, and house Caesar dressing.',
+                price: 21.00,
+                badgeKa: 'პოპულარული',
+                badgeEn: 'Popular'
+            },
+            {
+                id: 'cheese-board',
+                category: 'salads',
+                nameKa: 'ქართულ-ევროპული ყველის ასორტი',
+                nameEn: 'Artisanal Cheese Platter',
+                descKa: 'სულგუნი, იმერული, პარმეზანი, დორბლუ, თაფლი, ნიგოზი და ხრაშუნა გრისინი.',
+                descEn: 'Curated selection of Sulguni, Imeretian, Parmesan, and Blue cheese with honey, walnuts, and grissini.',
+                price: 32.00,
+                badgeKa: 'ღვინოსთან',
+                badgeEn: 'Wine Pairing'
+            },
+
+            // Bar & Cocktails
+            {
+                id: 'cocktail-kronika',
+                category: 'bar',
+                nameKa: 'საავტორო კოქტეილი „ქრონიკა“',
+                nameEn: 'Signature Cocktail "Kronika"',
+                descKa: 'დაძველებული ბურბონი, ბროწეულის ლიქიორი, ქართული სუნელების ბითერი და ფორთოხლის ცედრა.',
+                descEn: 'Aged bourbon, pomegranate liqueur, Georgian spice bitters, and flamed orange zest.',
+                price: 20.00,
+                badgeKa: 'საფირმო',
+                badgeEn: 'Signature'
+            },
+            {
+                id: 'saperavi-qvevri',
+                category: 'bar',
+                nameKa: 'საფერავი ქვევრის (ბოთლი 0.75ლ)',
+                nameEn: 'Qvevri Saperavi Reserve (0.75L)',
+                descKa: 'მშრალი წითელი ღვინო მუქი კენკრისა და მუხის მდიდარი ტონებით.',
+                descEn: 'Full-bodied dry red wine fermented in traditional clay Qvevri with dark berry notes.',
+                price: 45.00,
+                badgeKa: 'რჩეული ღვინო',
+                badgeEn: 'Sommelier Pick'
+            },
+            {
+                id: 'chacha-sour',
+                category: 'bar',
+                nameKa: 'ჭაჭა საუერი ტარხუნით',
+                nameEn: 'Tarragon Chacha Sour',
+                descKa: 'მუხაში დავარგებული ჭაჭა, ქართული ტარხუნის სიროფი, ახალი ლაიმი და აბრეშუმის ქაფი.',
+                descEn: 'Oak-aged Georgian Chacha, fresh tarragon infusion, lime juice, and velvety foam.',
+                price: 18.00,
+                badgeKa: '',
+                badgeEn: ''
+            }
+        ];
+
+        // 2. TRANSLATIONS DICTIONARY
+        const i18n = {
+            ka: {
+                brandName: 'ქრონიკა',
+                brandSub: 'ბარ-რესტორანი • ქუთაისი',
+                navHome: 'მთავარი',
+                navAbout: 'ჩვენ შესახებ',
+                navMenu: 'მენიუ',
+                navGallery: 'გალერეა',
+                navContact: 'კონტაქტი',
+                ctaBook: 'მაგიდის დაჯავშნა',
+                ctaViewMenu: 'მენიუს ნახვა',
+                heroBadge: 'ქუთაისი • იოსებ გრიშაშვილის #35',
+                heroTitle1: 'გემო, რომელიც',
+                heroTitle2: 'ისტორიად იქცევა',
+                heroSub: 'ტრადიციული ქართული გასტრონომიისა და დახვეწილი ევროპული სამზარეულოს ჰარმონია ქუთაისის გულში. საავტორო კოქტეილები, რჩეული ღვინო და მყუდრო საღამოები 01:00 საათამდე.',
+                infoHoursLabel: 'სამუშაო საათები',
+                infoHoursVal: 'ყოველდღე: 10:00 – 01:00',
+                infoAddrLabel: 'მისამართი',
+                infoAddrVal: 'გრიშაშვილის #35, ქუთაისი',
+                infoPhoneLabel: 'დასაჯავშნად დაგვირეკეთ',
+                aboutHoursNote: 'დილის ყავიდან გვიან საღამოს კოქტეილებამდე',
+                aboutVipNote: 'იზოლირებული სივრცეები განსაკუთრებული შეხვედრებისთვის',
+                aboutTag: 'ჩვენი ისტორია',
+                aboutHeading: 'ადგილი, სადაც ქუთაისური სტუმართმოყვარეობა და თანამედროვე გემო ერთიანდება',
+                aboutDesc1: 'ბარ-რესტორანი „ქრონიკა“ (გრიშაშვილის #35) შეიქმნა იმისთვის, რომ თითოეული სტუმრობა დაუვიწყარ მოგონებად აქციოს. აქ ერთ სივრცეში თანაარსებობს ავთენტური ქართული კერძების მდიდარი არომატი და ევროპული გასტრონომიის ელეგანტურობა.',
+                aboutDesc2: 'იქნება ეს საქმიანი ლანჩი, ოჯახური ვახშამი, რომანტიკული საღამო თუ მეგობრებთან ერთად გართობა საავტორო კოქტეილების თანხლებით — „ქრონიკა“ გთავაზობთ სიმყუდროვეს, უმაღლეს სერვისსა და გულწრფელ მასპინძლობას.',
+                feat1Title: 'ქართულ-ევროპული სამზარეულო',
+                feat1Desc: 'ახალი, ადგილობრივი ინგრედიენტებით მომზადებული საფირმო კერძები.',
+                feat2Title: 'საავტორო ბარი და ღვინო',
+                feat2Desc: 'ქვევრის რჩეული ღვინოები, საფირმო კოქტეილები და კრაფტ ლუდი.',
+                feat3Title: 'VIP / პრივატული სივრცეები',
+                feat3Desc: 'მყუდრო კუპეები დაბადების დღეებისა და დახურული წვეულებებისთვის.',
+                feat4Title: 'კომფორტი და პარკინგი',
+                feat4Desc: 'მოსახერხებელი მდებარეობა და უფასო პარკირების შესაძლებლობა.',
+                menuTag: 'გასტრონომიული კოლექცია',
+                menuHeading: '„ქრონიკას“ მენიუ',
+                menuSub: 'აირჩიეთ სასურველი კერძები და სასმელები, დაამატეთ წინასწარი შეკვეთის სიაში და მიაბით მაგიდის ჯავშანს.',
+                catAll: 'ყველა',
+                catGeorgian: 'ქართული კერძები',
+                catEuropean: 'ევროპული სამზარეულო',
+                catSalads: 'სალათები და წასახემსებელი',
+                catBar: 'ბარი და კოქტეილები',
+                addBtn: '+ დამატება',
+                preorderBannerTitle: 'გსურთ მაგიდაზე კერძები წინასწარ დაგხვდეთ?',
+                preorderBannerSub: 'დაამატეთ კერძები სიაში ღილაკით „+ დამატება“ და გადაიტანეთ პირდაპირ ჯავშანში.',
+                viewPreorderBtn: 'შეკვეთის სიის ნახვა',
+                galTag: 'ატმოსფერო და დეტალები',
+                galHeading: '„ქრონიკას“ კადრები',
+                galSub: 'დააჭირეთ ნებისმიერ ფოტოს სრულ ეკრანზე სანახავად.',
+                galCat1: 'ინტერიერი',
+                galTitle1: 'მყუდრო დარბაზი',
+                galCat2: 'გასტრონომია',
+                galTitle2: 'ქართული ტრადიცია',
+                galCat3: 'ბარი',
+                galTitle3: 'საავტორო კოქტეილები',
+                galCat4: 'ევროპული ხაზი',
+                galTitle4: 'შეფის სპეციალური',
+                revHeading: 'რას ამბობენ ჩვენი სტუმრები',
+                rev1Text: '„ქუთაისში ერთ-ერთი საუკეთესო ადგილია! საოცარი იმერული ხაჭაპური, უგემრიელესი ოჯახური და ძალიან ყურადღებიანი მომსახურება. საღამოს ატმოსფერო კი უბრალოდ შეუდარებელია.“',
+                rev1Author: 'გიორგი მ.',
+                rev2Text: '„დაბადების დღე აღვნიშნეთ პრივატულ სივრცეში. კერძების პორციები ძალიან დიდია და გემო — უმაღლესი დონის. კოქტეილი „ქრონიკა“ აუცილებლად უნდა გასინჯოთ!“',
+                rev2Author: 'ნინო კ.',
+                rev3Text: '„დახვეწილი ინტერიერი, სასიამოვნო მუსიკა და გვიანობამდე მუშაობის გრაფიკი. იდეალური ადგილია როგორც სადილისთვის, ისე მეგობრებთან ერთად საღამოს გასატარებლად.“',
+                rev3Author: 'დავით ბ.',
+                contactTag: 'კონტაქტი და ლოკაცია',
+                contactHeading: 'გვეწვიეთ ქუთაისში',
+                contactSub: 'დაჯავშნეთ მაგიდა ონლაინ ან დაგვიკავშირდით ტელეფონით. სიამოვნებით გიმასპინძლებთ!',
+                fullAddr: 'იოსებ გრიშაშვილის ქუჩა #35, ქუთაისი',
+                openGoogleMaps: 'Google Maps-ზე გახსნა',
+                phoneLabel: 'ტელეფონი / ჯავშნები',
+                copyBtn: 'კოპირება',
+                fbFollow: 'გვესტუმრეთ Facebook-ზე',
+                mapCtaTitle: 'მზად ხართ საღამოს დასაგეგმად?',
+                mapCtaSub: 'აირჩიეთ სასურველი დრო და დარბაზი სულ რაღაც 30 წამში.',
+                mapDirections: 'მარშრუტი',
+                footerBrand: 'ბარ-რესტორანი „ქრონიკა“',
+                footerRights: 'ბარ-რესტორანი „ქრონიკა“ (Bar-Restaurant Kronika). ყველა უფლება დაცულია.',
+                mobCall: 'დარეკვა',
+                mobBook: 'დაჯავშნა',
+                drawerTitle: 'წინასწარი შეკვეთის სია',
+                drawerSub: 'არჩეული კერძები ავტომატურად მიებმება მაგიდის ჯავშანს',
+                drawerTotal: 'სავარაუდო ჯამი:',
+                drawerClear: 'გასუფთავება',
+                drawerProceed: 'ჯავშანზე გადასვლა',
+                drawerEmpty: 'თქვენი შეკვეთის სია ჯერ ცარიელია.',
+                modalTag: 'ონლაინ ჯავშანი',
+                modalTitle: 'მაგიდის დაჯავშნა „ქრონიკაში“',
+                modalSub: 'იოსებ გრიშაშვილის #35 • სამუშაო საათები: 10:00 – 01:00',
+                formNameLabel: 'სახელი და გვარი *',
+                formPhoneLabel: 'ტელეფონის ნომერი *',
+                formDateLabel: 'თარიღი *',
+                formTimeLabel: 'დრო *',
+                formGuestsLabel: 'სტუმრების რაოდენობა *',
+                formZoneLabel: 'სასურველი სივრცე',
+                zoneMain: 'მთავარი დარბაზი',
+                zoneBar: 'ბარის ზონა',
+                zoneVip: 'პრივატული კუპე',
+                formNotesLabel: 'დამატებითი სურვილები / წინასწარი შეკვეთა',
+                formSubmitBtn: 'ჯავშნის დადასტურება',
+                receiptTitle: 'ჯავშანი მიღებულია!',
+                receiptSub: 'ჩვენი მენეჯერი მალე დაგიკავშირდებათ დეტალების დასაზუსტებლად.',
+                receiptCallBtn: 'დარეკვა: 596 35 77 35',
+                receiptCloseBtn: 'დახურვა',
+                closeLabel: 'დახურვა',
+                toastAdded: 'დაემატა წინასწარი შეკვეთის სიაში!',
+                toastCopied: 'ნომერი დაკოპირდა: +995 596 35 77 35'
+            },
+            en: {
+                brandName: 'KRONIKA',
+                brandSub: 'Bar-Restaurant • Kutaisi',
+                navHome: 'Home',
+                navAbout: 'About Us',
+                navMenu: 'Menu',
+                navGallery: 'Gallery',
+                navContact: 'Contact',
+                ctaBook: 'Book a Table',
+                ctaViewMenu: 'Explore Menu',
+                heroBadge: 'Kutaisi • 35 Ioseb Grishashvili St.',
+                heroTitle1: 'Taste That',
+                heroTitle2: 'Becomes History',
+                heroSub: 'A refined harmony of traditional Georgian gastronomy and European cuisine in the heart of Kutaisi. Signature cocktails, Qvevri wines, and cozy evenings until 01:00 AM.',
+                infoHoursLabel: 'Opening Hours',
+                infoHoursVal: 'Mon–Sun: 10:00 AM – 01:00 AM',
+                infoAddrLabel: 'Address',
+                infoAddrVal: '35 Grishashvili St, Kutaisi',
+                infoPhoneLabel: 'Call for Reservations',
+                aboutHoursNote: 'From morning coffee to late-night signature cocktails',
+                aboutVipNote: 'Private dining rooms for special celebrations & meetings',
+                aboutTag: 'Our Story',
+                aboutHeading: 'Where Kutaisi Hospitality Meets Contemporary Gastronomy',
+                aboutDesc1: 'Bar-Restaurant "Kronika" (35 Grishashvili St) was created to turn every visit into a memorable story. Under one roof, the rich flavors of authentic Georgian classics meet the elegance of European dining.',
+                aboutDesc2: 'Whether it is a business lunch, family dinner, romantic evening, or gathering with friends over handcrafted cocktails — Kronika offers warmth, attentive service, and genuine Georgian hospitality.',
+                feat1Title: 'Georgian & European Cuisine',
+                feat1Desc: 'Signature dishes crafted daily from fresh, locally sourced ingredients.',
+                feat2Title: 'Signature Bar & Wine',
+                feat2Desc: 'Selected Qvevri wines, house cocktails, and chilled craft beers.',
+                feat3Title: 'VIP / Private Dining Rooms',
+                feat3Desc: 'Intimate private booths ideal for birthdays and closed gatherings.',
+                feat4Title: 'Comfort & Free Parking',
+                feat4Desc: 'Convenient central location with easy street parking.',
+                menuTag: 'Culinary Collection',
+                menuHeading: 'Kronika Menu',
+                menuSub: 'Select your favorite dishes and drinks, add them to your tasting list, and attach them directly to your table booking.',
+                catAll: 'All',
+                catGeorgian: 'Georgian Classics',
+                catEuropean: 'European Cuisine',
+                catSalads: 'Salads & Starters',
+                catBar: 'Bar & Cocktails',
+                addBtn: '+ Add',
+                preorderBannerTitle: 'Want your dishes served right on arrival?',
+                preorderBannerSub: 'Add dishes using "+ Add" and attach them straight to your table reservation.',
+                viewPreorderBtn: 'View Pre-Order List',
+                galTag: 'Atmosphere & Details',
+                galHeading: 'Moments at Kronika',
+                galSub: 'Click on any photo to inspect in full screen.',
+                galCat1: 'Interior',
+                galTitle1: 'Cozy Main Hall',
+                galCat2: 'Gastronomy',
+                galTitle2: 'Georgian Heritage',
+                galCat3: 'Lounge Bar',
+                galTitle3: 'Signature Cocktails',
+                galCat4: 'European Line',
+                galTitle4: "Chef's Specials",
+                revHeading: 'What Our Guests Say',
+                rev1Text: '"One of the finest spots in Kutaisi! Amazing Imeretian Khachapuri, delicious Ojakhuri, and genuinely attentive staff. The evening lounge vibe is unmatched."',
+                rev1Author: 'Giorgi M.',
+                rev2Text: '"Celebrated a birthday in the private room. Generous portions and top-tier flavor. You definitely have to try the signature Kronika cocktail!"',
+                rev2Author: 'Nino K.',
+                rev3Text: '"Sophisticated interior, pleasant music, and open late until 1 AM. Ideal for both a relaxed lunch and a lively night out with friends."',
+                rev3Author: 'Davit B.',
+                contactTag: 'Contact & Location',
+                contactHeading: 'Visit Us in Kutaisi',
+                contactSub: 'Reserve your table online or give us a quick call. We look forward to hosting you!',
+                fullAddr: '35 Ioseb Grishashvili Street, Kutaisi, Georgia',
+                openGoogleMaps: 'Open in Google Maps',
+                phoneLabel: 'Phone / Reservations',
+                copyBtn: 'Copy',
+                fbFollow: 'Follow on Facebook',
+                mapCtaTitle: 'Ready to plan your evening?',
+                mapCtaSub: 'Pick your preferred time and dining zone in just 30 seconds.',
+                mapDirections: 'Directions',
+                footerBrand: 'Bar-Restaurant "Kronika"',
+                footerRights: 'Bar-Restaurant Kronika. All rights reserved.',
+                mobCall: 'Call',
+                mobBook: 'Book Table',
+                drawerTitle: 'Pre-Order / Tasting List',
+                drawerSub: 'Selected items will automatically attach to your reservation',
+                drawerTotal: 'Estimated Total:',
+                drawerClear: 'Clear',
+                drawerProceed: 'Attach to Booking',
+                drawerEmpty: 'Your pre-order list is currently empty.',
+                modalTag: 'Online Reservation',
+                modalTitle: 'Book a Table at Kronika',
+                modalSub: '35 Ioseb Grishashvili St • Open Daily: 10:00 – 01:00',
+                formNameLabel: 'Full Name *',
+                formPhoneLabel: 'Phone Number *',
+                formDateLabel: 'Date *',
+                formTimeLabel: 'Time *',
+                formGuestsLabel: 'Number of Guests *',
+                formZoneLabel: 'Preferred Dining Zone',
+                zoneMain: 'Main Hall',
+                zoneBar: 'Bar Lounge',
+                zoneVip: 'Private Room (VIP)',
+                formNotesLabel: 'Special Requests / Pre-Ordered Dishes',
+                formSubmitBtn: 'Confirm Reservation',
+                receiptTitle: 'Reservation Received!',
+                receiptSub: 'Our host will contact you shortly to confirm your table.',
+                receiptCallBtn: 'Call Now: 596 35 77 35',
+                receiptCloseBtn: 'Close',
+                closeLabel: 'Close',
+                toastAdded: 'Added to your pre-order list!',
+                toastCopied: 'Copied to clipboard: +995 596 35 77 35'
+            }
+        };
+
+        // 3. STATE MANAGEMENT
+        let currentLang = 'ka';
+        let activeCategory = 'all';
+        let cart = []; // { id, qty }
+
+        // 4. INITIALIZATION
+        document.addEventListener('DOMContentLoaded', () => {
+            document.getElementById('currentYear').textContent = new Date().getFullYear();
+            
+            // Set default date in booking modal to today
+            const today = new Date().toISOString().split('T')[0];
+            const dateInput = document.getElementById('bookingDate');
+            dateInput.value = today;
+            dateInput.min = today;
+
+            renderCategoryTabs();
+            renderMenuGrid();
+            renderCartUI();
+        });
+
+        // 5. LANGUAGE SWITCHING
+        function toggleLanguage() {
+            currentLang = currentLang === 'ka' ? 'en' : 'ka';
+            document.documentElement.lang = currentLang;
+            document.getElementById('langToggle').textContent = currentLang === 'ka' ? 'EN' : 'KA';
+
+            // Update all elements with data-i18n
+            const dict = i18n[currentLang];
+            document.querySelectorAll('[data-i18n]').forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                if (dict[key]) {
+                    el.textContent = dict[key];
+                }
+            });
+
+            renderCategoryTabs();
+            renderMenuGrid();
+            renderCartUI();
+        }
+
+        // 6. MENU RENDERING & FILTERING
+        function renderCategoryTabs() {
+            const dict = i18n[currentLang];
+            const categories = [
+                { id: 'all', label: dict.catAll },
+                { id: 'georgian', label: dict.catGeorgian },
+                { id: 'european', label: dict.catEuropean },
+                { id: 'salads', label: dict.catSalads },
+                { id: 'bar', label: dict.catBar }
+            ];
+
+            const container = document.getElementById('menuFilters');
+            container.innerHTML = categories.map(cat => {
+                const isActive = activeCategory === cat.id;
+                return `
+                    <button 
+                        onclick="filterMenu('${cat.id}')"
+                        class="px-5 py-2.5 rounded-full text-xs sm:text-sm font-semibold transition-all cursor-pointer ${
+                            isActive 
+                            ? 'bg-gold text-obsidian shadow-gold-glow' 
+                            : 'bg-surface text-warmgray border border-white/10 hover:border-gold/40 hover:text-ivory'
+                        }">
+                        ${cat.label}
+                    </button>
+                `;
+            }).join('');
+        }
+
+        function filterMenu(category) {
+            activeCategory = category;
+            renderCategoryTabs();
+            renderMenuGrid();
+        }
+
+        function renderMenuGrid() {
+            const dict = i18n[currentLang];
+            const grid = document.getElementById('menuGrid');
+            const filtered = activeCategory === 'all' 
+                ? menuItems 
+                : menuItems.filter(item => item.category === activeCategory);
+
+            grid.innerHTML = filtered.map(item => {
+                const name = currentLang === 'ka' ? item.nameKa : item.nameEn;
+                const desc = currentLang === 'ka' ? item.descKa : item.descEn;
+                const badge = currentLang === 'ka' ? item.badgeKa : item.badgeEn;
+                const inCart = cart.find(c => c.id === item.id);
+
+                return `
+                    <div class="p-6 rounded-2xl bg-charcoal border border-gold/15 hover:border-gold/45 transition-all flex flex-col justify-between shadow-card group">
+                        <div>
+                            <div class="flex items-start justify-between gap-3 mb-2">
+                                <h3 class="font-serif text-lg sm:text-xl font-bold text-ivory group-hover:text-gold transition-colors">${name}</h3>
+                                <span class="font-bold text-lg text-gold shrink-0">${item.price.toFixed(2)} ₾</span>
+                            </div>
+                            ${badge ? `<span class="inline-block px-2.5 py-0.5 rounded-md bg-burgundy/80 border border-gold/30 text-gold-light text-[11px] font-medium mb-3">${badge}</span>` : ''}
+                            <p class="text-xs sm:text-sm text-warmgray leading-relaxed">${desc}</p>
+                        </div>
+
+                        <div class="mt-5 pt-4 border-t border-white/10 flex items-center justify-between">
+                            <span class="text-xs text-warmgray/70">
+                                ${inCart ? (currentLang === 'ka' ? `სიაშია: ${inCart.qty}` : `In list: ${inCart.qty}`) : ''}
+                            </span>
+                            <button 
+                                onclick="addToCart('${item.id}')" 
+                                class="px-4 py-2 rounded-xl bg-surface border border-gold/40 text-gold hover:bg-gold hover:text-obsidian text-xs font-bold transition-all active:scale-95 cursor-pointer">
+                                ${dict.addBtn}
+                            </button>
+                        </div>
+                    </div>
+                `;
+            }).join('');
+        }
+
+        // 7. PRE-ORDER CART LOGIC
+        function addToCart(itemId) {
+            const existing = cart.find(c => c.id === itemId);
+            if (existing) {
+                existing.qty += 1;
+            } else {
+                cart.push({ id: itemId, qty: 1 });
+            }
+            renderMenuGrid();
+            renderCartUI();
+            showToast(i18n[currentLang].toastAdded);
+        }
+
+        function updateCartQty(itemId, delta) {
+            const idx = cart.findIndex(c => c.id === itemId);
+            if (idx === -1) return;
+            cart[idx].qty += delta;
+            if (cart[idx].qty <= 0) {
+                cart.splice(idx, 1);
+            }
+            renderMenuGrid();
+            renderCartUI();
+        }
+
+        function clearCart() {
+            cart = [];
+            renderMenuGrid();
+            renderCartUI();
+        }
+
+        function renderCartUI() {
+            const dict = i18n[currentLang];
+            const totalQty = cart.reduce((sum, item) => sum + item.qty, 0);
+            const badge = document.getElementById('cartBadge');
+            const bannerCount = document.getElementById('bannerCartCount');
+
+            bannerCount.textContent = totalQty;
+            if (totalQty > 0) {
+                badge.textContent = totalQty;
+                badge.classList.remove('hidden');
+            } else {
+                badge.classList.add('hidden');
+            }
+
+            const itemsContainer = document.getElementById('drawerItems');
+            const totalAmountEl = document.getElementById('drawerTotalAmount');
+
+            if (cart.length === 0) {
+                itemsContainer.innerHTML = `<div class="text-center py-12 text-warmgray text-sm">${dict.drawerEmpty}</div>`;
+                totalAmountEl.textContent = '0.00 ₾';
+                return;
+            }
+
+            let totalPrice = 0;
+            itemsContainer.innerHTML = cart.map(c => {
+                const product = menuItems.find(m => m.id === c.id);
+                if (!product) return '';
+                const name = currentLang === 'ka' ? product.nameKa : product.nameEn;
+                const lineTotal = product.price * c.qty;
+                totalPrice += lineTotal;
+
+                return `
+                    <div class="p-3.5 rounded-xl bg-surface border border-white/10 flex items-center justify-between gap-3">
+                        <div class="flex-1 min-w-0">
+                            <p class="text-sm font-semibold text-ivory truncate">${name}</p>
+                            <p class="text-xs text-gold mt-0.5">${lineTotal.toFixed(2)} ₾</p>
+                        </div>
+                        <div class="flex items-center gap-2 bg-charcoal rounded-lg p-1 border border-white/10">
+                            <button onclick="updateCartQty('${c.id}', -1)" class="w-7 h-7 rounded-md bg-surface text-ivory hover:text-gold font-bold cursor-pointer">-</button>
+                            <span class="text-xs font-bold w-5 text-center">${c.qty}</span>
+                            <button onclick="updateCartQty('${c.id}', 1)" class="w-7 h-7 rounded-md bg-surface text-ivory hover:text-gold font-bold cursor-pointer">+</button>
+                        </div>
+                    </div>
+                `;
+            }).join('');
+
+            totalAmountEl.textContent = `${totalPrice.toFixed(2)} ₾`;
+        }
+
+        function toggleDrawer(open) {
+            const drawer = document.getElementById('preorderDrawer');
+            if (open) {
+                drawer.classList.remove('hidden');
+            } else {
+                drawer.classList.add('hidden');
+            }
+        }
+
+        function proceedToBookingWithCart() {
+            toggleDrawer(false);
+            openBookingModal(true);
+        }
+
+        // 8. RESERVATION MODAL LOGIC
+        function openBookingModal(attachCart = false) {
+            const modal = document.getElementById('bookingModal');
+            document.getElementById('bookingFormView').classList.remove('hidden');
+            document.getElementById('bookingReceiptView').classList.add('hidden');
+
+            // Auto-populate pre-ordered dishes into notes if cart has items
+            if (cart.length > 0) {
+                const notesField = document.getElementById('bookingNotes');
+                const orderLines = cart.map(c => {
+                    const p = menuItems.find(m => m.id === c.id);
+                    const label = currentLang === 'ka' ? p.nameKa : p.nameEn;
+                    return `${label} x${c.qty}`;
+                }).join(', ');
+
+                const prefix = currentLang === 'ka' ? 'წინასწარი შეკვეთა: ' : 'Pre-order: ';
+                if (!notesField.value.includes(prefix)) {
+                    notesField.value = `${prefix}${orderLines}`;
+                }
+            }
+
+            modal.classList.remove('hidden');
+        }
+
+        function closeBookingModal() {
+            document.getElementById('bookingModal').classList.add('hidden');
+        }
+
+        function resetBookingModal() {
+            closeBookingModal();
+            document.getElementById('reservationForm').reset();
+            const today = new Date().toISOString().split('T')[0];
+            document.getElementById('bookingDate').value = today;
+        }
+
+        function handleBookingSubmit(e) {
+            e.preventDefault();
+            const name = document.getElementById('guestName').value.trim();
+            const phone = document.getElementById('guestPhone').value.trim();
+            const date = document.getElementById('bookingDate').value;
+            const time = document.getElementById('bookingTime').value;
+            const guests = document.getElementById('guestCount').value;
+            const zoneEl = document.querySelector('input[name="zone"]:checked');
+            const zone = zoneEl ? zoneEl.value : 'მთავარი დარბაზი';
+            const notes = document.getElementById('bookingNotes').value.trim();
+
+            // Generate realistic reference code
+            const randomNum = Math.floor(1000 + Math.random() * 9000);
+            document.getElementById('bookingRefCode').textContent = `KRN-${randomNum}`;
+
+            const summaryBox = document.getElementById('receiptSummaryBox');
+            summaryBox.innerHTML = `
+                <div class="flex justify-between"><span class="text-warmgray">${currentLang === 'ka' ? 'სტუმარი:' : 'Guest:'}</span> <span class="font-semibold text-ivory">${escapeHtml(name)}</span></div>
+                <div class="flex justify-between"><span class="text-warmgray">${currentLang === 'ka' ? 'ტელეფონი:' : 'Phone:'}</span> <span class="font-semibold text-ivory">${escapeHtml(phone)}</span></div>
+                <div class="flex justify-between"><span class="text-warmgray">${currentLang === 'ka' ? 'თარიღი და დრო:' : 'Date & Time:'}</span> <span class="font-semibold text-gold">${date} • ${time}</span></div>
+                <div class="flex justify-between"><span class="text-warmgray">${currentLang === 'ka' ? 'რაოდენობა:' : 'Guests:'}</span> <span class="font-semibold text-ivory">${guests}</span></div>
+                <div class="flex justify-between"><span class="text-warmgray">${currentLang === 'ka' ? 'სივრცე:' : 'Zone:'}</span> <span class="font-semibold text-ivory">${zone}</span></div>
+                ${notes ? `<div class="pt-2 border-t border-white/10"><span class="text-warmgray block text-xs mb-1">${currentLang === 'ka' ? 'შენიშვნა:' : 'Notes:'}</span><span class="text-xs text-ivory/90">${escapeHtml(notes)}</span></div>` : ''}
+            `;
+
+            document.getElementById('bookingFormView').classList.add('hidden');
+            document.getElementById('bookingReceiptView').classList.remove('hidden');
+        }
+
+        // 9. MOBILE MENU, LIGHTBOX, CLIPBOARD & TOAST HELPERS
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobileMenu');
+            const ham = document.getElementById('hamburgerIcon');
+            const close = document.getElementById('closeIcon');
+            menu.classList.toggle('hidden');
+            ham.classList.toggle('hidden');
+            close.classList.toggle('hidden');
+        }
+
+        function openLightbox(src, caption) {
+            document.getElementById('lightboxImg').src = src;
+            document.getElementById('lightboxCaption').textContent = caption;
+            document.getElementById('lightboxModal').classList.remove('hidden');
+        }
+
+        function closeLightbox() {
+            document.getElementById('lightboxModal').classList.add('hidden');
+        }
+
+        function copyPhoneNumber() {
+            const tempInput = document.createElement('input');
+            tempInput.value = '+995 596 35 77 35';
+            document.body.appendChild(tempInput);
+            tempInput.select();
+            document.execCommand('copy');
+            document.body.removeChild(tempInput);
+            showToast(i18n[currentLang].toastCopied);
+        }
+
+        let toastTimer;
+        function showToast(msg) {
+            const toast = document.getElementById('toastNotification');
+            document.getElementById('toastMessage').textContent = msg;
+            toast.classList.remove('hidden');
+            clearTimeout(toastTimer);
+            toastTimer = setTimeout(() => {
+                toast.classList.add('hidden');
+            }, 3000);
+        }
+
+        function escapeHtml(str) {
+            const div = document.createElement('div');
+            div.textContent = str;
+            return div.innerHTML;
+        }
+    </script>
+</body>
+</html>
